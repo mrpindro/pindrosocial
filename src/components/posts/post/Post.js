@@ -74,7 +74,7 @@ const Post = ({ post, setCurrentId }) => {
                     }
                     <Link to={`/post/${post._id}`} className='nav-links post-content'>
                         <p className='post-content-para'>
-                            {post.message.substring(0, 75)}...
+                            {post.message.substring(0, 100)}...
                         </p>
                         {/* <div className='post-content'>
                         </div> */}

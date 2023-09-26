@@ -1,5 +1,3 @@
-// import React, { useEffect } from 'react';
-// import Post from './posts/post/Post';
 import { useContext, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaThumbsUp } from 'react-icons/fa';
@@ -18,7 +16,6 @@ const PostPage = () => {
 
     const [currentId, setCurrentId ] = useState(null);
     const { id } = useParams();
-    // const post = posts.find((post) => (post._id) === id)
     const user = JSON.parse(localStorage.getItem('profile'));
     const { visible, setVisible } = useContext(DataContext);
 
@@ -159,7 +156,7 @@ const PostPage = () => {
                 </div>
 
             )}
-            {recommendedPosts?.length && (
+            {recommendedPosts && (
                 <div className="recommendation-con">
                     <h3>You might also like:</h3>
                     <hr />
