@@ -71,11 +71,12 @@ const Form = () => {
                 }
             })
             setMsg("Upload Successful")
-            // console.log(res.data);
+            console.log(res.data);
             clear();
             navigate('/');
         } catch (error) {
             setMsg("Upload failed");
+            console.log(error);
             // console.error(error);
         }        
     }
