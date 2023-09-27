@@ -7,8 +7,13 @@ import thunk from 'redux-thunk'
 import reducers from './reducers';
 import './index.css';
 import App from './App';
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
-const store = createStore(reducers, compose(applyMiddleware(thunk)))
+if (process.env.NODE_ENV === 'production') {
+  disableReactDevTools();
+}
+
+const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
