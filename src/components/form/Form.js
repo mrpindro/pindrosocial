@@ -96,7 +96,8 @@ const Form = () => {
                 autoComplete='off'
                 noValidate
                 onSubmit={handleSubmit}
-                >
+                encType='multipart/form-data'
+            >
                 <h2>Create a Post</h2>
                 <div className='form-group'>
                     <input  
