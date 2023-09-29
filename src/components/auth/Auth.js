@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { AiFillLock } from 'react-icons/ai';
-import { GoogleLogin } from '@react-oauth/google';
+// import { GoogleLogin } from '@react-oauth/google';
 import Input from '../Input';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -230,12 +230,12 @@ const Auth = () => {
               </div>
             )} */}
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <GoogleLogin 
                 onSuccess={googleSuccess}
                 onError={googleError}
               />
-            </div>
+            </div> */}
             {/* <button type='button' onClick={login}>
               Login with google
             </button> */}
