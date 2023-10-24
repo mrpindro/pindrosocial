@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
 const Input = ({
-    inputName, autoFocus, handleChange, placeholder, 
+    inputName, autoFocus, handleChange, placeholder, accept, 
     inputId, pswdIcon, htmlFor, label, type, useRef
 }) => {
     const [showPassword, setShowPassword] = useState(false);
@@ -26,6 +26,7 @@ const Input = ({
                 autoFocus={autoFocus}
                 onChange={handleChange}
                 placeholder={placeholder}
+                accept={accept}
                 required
                 className='form-control'
                 ref={useRef}

@@ -165,6 +165,7 @@ const Auth = () => {
                   label="Select a profile image"
                   htmlFor='image-url'
                   inputId='image-url'
+                  accept='image/*'
                   handleChange={(e) => setImageUrl(e.target.files[0])}
                 />
                 <Input 
