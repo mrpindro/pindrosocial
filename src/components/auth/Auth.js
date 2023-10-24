@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { signin, signup } from '../../actions/auth';
 import { AUTH } from '../../constants/actionTypes';
 import { API } from '../../api';
+import useTitle from '../../hooks/useTitle';
 
 // function navigate(url) {
 //   window.location.href = url;
@@ -29,6 +30,10 @@ const Auth = () => {
   const [pswdIcon, setPswdIcon] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
   const [formData, setformData] = useState(initialState);
+
+  const title = isSignUp ? 'Pindro Social: Register' : 'Pindro Social: Login';
+  useTitle(title);
+
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');

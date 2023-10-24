@@ -30,7 +30,7 @@ const AppBar = () => {
 
             if (decodedToken.exp * 1000 < new Date().getTime()) {
                 logout();
-                window.location.reload();
+                window.reload();
             }
         }
 

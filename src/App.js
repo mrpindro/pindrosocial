@@ -7,9 +7,12 @@ import EditPost from './components/EditPost';
 import PostPage from './components/PostPage';
 import { ContextProvider } from './context/ContextProvider';
 import Footer from './components/Footer';
+import useTitle from './hooks/useTitle';
 
 function App() {
   const user = JSON.parse(localStorage.getItem('profile'));
+  const title = user ? `Pindro Social: ${user?.result?.name}` : 'Pindro Social: Posts';
+  useTitle(title);
 
   return (
     <ContextProvider>

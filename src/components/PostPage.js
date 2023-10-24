@@ -9,9 +9,13 @@ import ClipLoader from 'react-spinners/ClipLoader';
 import DataContext from '../context/ContextProvider';
 import Recommended from './Recommended';
 import CommentSection from './CommentSection';
+import useTitle from '../hooks/useTitle';
 
 const PostPage = () => {
     const { posts, post, isLoading } = useSelector((state) => state.posts);
+
+    useTitle(`Pindro Social: ${post?.title}`);
+
     const dispatch = useDispatch();
 
     const [currentId, setCurrentId ] = useState(null);
