@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const API = axios.create({ baseURL: 'http://localhost:5500' });
-// export const API = axios.create({ baseURL: 'https://pindrosocial-api.onrender.com' });
+// export const API = axios.create({ baseURL: 'http://localhost:5500' });
+export const API = axios.create({ baseURL: 'https://pindrosocial-api.onrender.com' });
 
 API.interceptors.request.use((req) => {
     if (localStorage.getItem('profile')) {
